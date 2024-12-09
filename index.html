@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UOI 2025. II stage</title>
+    <link rel="stylesheet" href="style.css">
+    
+ 
+    <link href="https://fonts.googleapis.com/css2?family=Cascadia+Code:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Aptos:wght@700&display=swap" rel="stylesheet">
+
+    
+</head>
+<body>
+    <a href="UOI 2025. II stage.docx">Документ з розв'язками</a>
+    <h1>Задача A</h1>
+    <p id="textToCopy_A">#include <<iostream>iostream><br>using namespace std;<br>int main(){<br>int n, m;<br>cin >> n >> m;<br>cout << n + m - 2 << endl;<br>}   </p>
+    <a  onclick="copyText_A()">Копіювати код</a>
+    <a target="_blank" href="https://uoi.eolymp.space/uk/compete/85np4osmd51vveoskk8rirbbbc/problem/1">Перейти до задачі</a>
+    
+    <h1>Задача B</h1>
+    <p id="textToCopy_B">
+        #include <<iostream>iostream><br>using namespace std;<br>int main(){<br>int x, y, z;<br>cin >> x >> y >> z;<br>cout << x * x + y * y + z * z << endl;<br>}</p>
+    <a  onclick="copyText_B()">Копіювати код</a>
+    <a target="_blank" href="https://uoi.eolymp.space/uk/compete/85np4osmd51vveoskk8rirbbbc/problem/2">Перейти до задачі</a>
+    
+    <h1>Задача C</h1>
+    <p id="textToCopy_C">
+        #include <<iostream>iostream><br>using namespace std;<br>int main() {<br>int A, B, C;<br>cin >> A >> B >> C;<br>cout << (B - C <= A ? "YES\n" : "NO\n");<br>}
+    </p>
+    <a  onclick="copyText_C()">Копіювати код</a>
+    <a target="_blank" href="https://uoi.eolymp.space/uk/compete/85np4osmd51vveoskk8rirbbbc/problem/3">Перейти до задачі</a>
+    
+    <h1>Задача D</h1>
+    <p id="textToCopy_D">
+        #include <<iostream>iostream><br>using namespace std;<br>int main() {<br>int A, B, C;<br>cin >> A >> B >> C;<br>if ((A + B + C) % 3 != 0) {<br>cout << "-1\n";<br>} else {<br>int avg = (A + B + C) / 3;<br>cout << (abs(A - avg) + abs(B - avg) + abs(C - avg)) / 2 << "\n";<br>}<br>}
+    </p>
+    <a  onclick="copyText_D()">Копіювати код</a>
+    <a target="_blank" href="https://uoi.eolymp.space/uk/compete/85np4osmd51vveoskk8rirbbbc/problem/4">Перейти до задачі</a>
+    
+    <h1>Задача E</h1>
+    <p id="textToCopy_E">
+        #include <<iostream>iostream><br>#include <<string>string><br>using namespace std;<br>int main() {<br>int n, cur = 0; cin >> n;<br>string s; cin >> s;<br>int po[n + 1];<br>for (int i = 0; i < n; i++)<br>po[i] = (s[i] == 'R');<br>for (int i = 0; i < n; i++, cur++) {<br>if (cur % 2 == 0) {<br>if (po[i])<br>cur++;<br>}<br>else if (!po[i])cur++;<br>}<br>cout << cur;<br>}
+    </p>
+    <a  onclick="copyText_E()">Копіювати код</a>
+    <a target="_blank" href="https://uoi.eolymp.space/uk/compete/85np4osmd51vveoskk8rirbbbc/problem/5">Перейти до задачі</a>
+    
+    <h1>Задача F</h1>
+    <p id="textToCopy_F">
+        #include <<iostream>iostream><br>#include <<string>string><br>using namespace std;<br>int main() {<br>int n, F = 0; cin >> n;<br>string s; cin >> s;<br>while (s[F] != '1') { F++; }<br>int S = F + 1;<br>while (s[S] != '1') { S++; }<br>if ((S - F + 1) % 2 == 0) {<br>cout << F + 1 << " " << S + 1; return 0;<br>}<br>if (F != 0) {<br>F--;<br>if (s[F] == '1')cout << F + 1 << " " << F + 2;<br>else cout << F + 1 << " " << S + 1;<br>}<br>else {<br>S++;<br>if (s[S] == '1') cout << S << " " << S + 1;<br>else cout << F + 1 << " " << S + 1;<br>}<br>}
+    </p>
+    <a  onclick="copyText_F()">Копіювати код</a>
+    <a target="_blank" href="https://uoi.eolymp.space/uk/compete/85np4osmd51vveoskk8rirbbbc/problem/6">Перейти до задачі</a>
+    
+    <h1>Задача G</h1>
+    <p id="textToCopy_G">
+        #include <<iostream>iostream><br>#include <<vector>vector><br>#include <<algorithm>algorithm><br>using namespace std;<br>int main() {<br>int n; cin >> n;<br>vector<<int>int>v, a(n);<br>for (int i = 0; i < n; i++) cin >> a[i];<br>sort(a.begin(), a.end());<br>int l = 0, r = n - 1;<br>bool f = 0;<br>while (l < r) {<br>if (f) {<br>v.push_back(a[l]);<br>l++;<br>}<br>else {<br>v.push_back(a[r]);<br>r--;<br>}<br>f = 1 - f;<br>}<br>v.push_back(a[l]);<br>for (int i = 0; i < n; i++)<br>cout << v[i] << " ";<br>}
+    </p>
+    <a  onclick="copyText_G()">Копіювати код</a>
+    <a target="_blank" href="https://uoi.eolymp.space/uk/compete/85np4osmd51vveoskk8rirbbbc/problem/7">Перейти до задачі</a>
+    
+    <h1>Задача H</h1>
+    <p id="textToCopy_H">
+        #include <<iostream>iostream><br>#include <<vector>vector><br>using namespace std;<br>int mp1[(int)1e6 + 10], mp[(int)1e6 + 10];<br>int32_t main() {<br>int n; cin >> n;<br>vector<<int>int> a(n + 1);<br>for (int i = 1; i <= n; i++) cin >> a[i];<br>int t1 = 0, t2 = 0, re = n;<br>for (int i = 1; i <= n / 2; i++) {<br>if(a[i]==a[n-i+1]) { mp1[a[i]]++; t1++; }<br>else { mp[a[i]]++; mp[a[n-i+1]]++; t2++;}<br>}<br>for (int i = 1; i <= n; i++) {<br>int q = 2 * mp1[a[i]] + 2 * mp[a[i]];<br>if (q >= (n + 2) / 2) re = min(re, t2);<br>else {<br>int to = (n + 2) / 2 - q, t3 = t2 - mp[a[i]];<br>t3 *= 2;to = to + to % 2;<br>if(t3+q>=(n+2)/2) re=min(re,mp[a[i]]+to+(t3-to)/2); <br>else {<br>int res = mp[a[i]] + t3;<br>q+=t3; to=(n+2)/2-q;<br>to=to+to%2; re=min(re,res+to); <br>}<br>}<br>}<br>cout << re;<br>} 
+    </p>
+    <a  onclick="copyText_H()">Копіювати код</a>
+    <a target="_blank" href="https://uoi.eolymp.space/uk/compete/85np4osmd51vveoskk8rirbbbc/problem/8">Перейти до задачі</a>
+    
+
+
+
+
+
+    <script>
+        function copyText_A() {
+            var text = document.getElementById("textToCopy_A").innerText;
+            navigator.clipboard.writeText(text).then(function() {
+                alert("Текст скопійовано: " + text);
+            }, function(err) {
+                alert("Не вдалося скопіювати текст: ", err);
+            });
+        }
+    </script><script>
+        function copyText_B() {
+            var text = document.getElementById("textToCopy_B").innerText;
+            navigator.clipboard.writeText(text).then(function() {
+                alert("Текст скопійовано: " + text);
+            }, function(err) {
+                alert("Не вдалося скопіювати текст: ", err);
+            });
+        }
+    </script>
+    <script>
+        function copyText_C() {
+            var text = document.getElementById("textToCopy_C").innerText;
+            navigator.clipboard.writeText(text).then(function() {
+                alert("Текст скопійовано: " + text);
+            }, function(err) {
+                alert("Не вдалося скопіювати текст: ", err);
+            });
+        }
+    </script><script>
+        function copyText_D() {
+            var text = document.getElementById("textToCopy_D").innerText;
+            navigator.clipboard.writeText(text).then(function() {
+                alert("Текст скопійовано: " + text);
+            }, function(err) {
+                alert("Не вдалося скопіювати текст: ", err);
+            });
+        }
+    </script><script>
+        function copyText_E() {
+            var text = document.getElementById("textToCopy_E").innerText;
+            navigator.clipboard.writeText(text).then(function() {
+                alert("Текст скопійовано: " + text);
+            }, function(err) {
+                alert("Не вдалося скопіювати текст: ", err);
+            });
+        }
+    </script><script>
+        function copyText_F() {
+            var text = document.getElementById("textToCopy_F").innerText;
+            navigator.clipboard.writeText(text).then(function() {
+                alert("Текст скопійовано: " + text);
+            }, function(err) {
+                alert("Не вдалося скопіювати текст: ", err);
+            });
+        }
+    </script>
+    <script>
+        function copyText_G() {
+            var text = document.getElementById("textToCopy_G").innerText;
+            navigator.clipboard.writeText(text).then(function() {
+                alert("Текст скопійовано: " + text);
+            }, function(err) {
+                alert("Не вдалося скопіювати текст: ", err);
+            });
+        }
+    </script><script>
+        function copyText_H() {
+            var text = document.getElementById("textToCopy_H").innerText;
+            navigator.clipboard.writeText(text).then(function() {
+                alert("Текст скопійовано: " + text);
+            }, function(err) {
+                alert("Не вдалося скопіювати текст: ", err);
+            });
+        }
+    </script>
+</body>
+</html>
