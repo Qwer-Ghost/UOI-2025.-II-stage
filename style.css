@@ -1,3 +1,9 @@
+@media(max-width: 580px){  
+    a{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;}
+}
 h1 { 
     margin-top: 70px;
     font-family: 'Aptos', sans-serif; 
